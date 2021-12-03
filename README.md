@@ -458,5 +458,38 @@ To remove a file from Git, you have to remove it from your tracked files and the
   > **$ git add**<br />
   > **$ git status**<br />
   > **$ git restore --staged CONTRIBUTING.md**<br />
-  > **$git status**
+  > **$ git status**
   
+  # Working with Remotes
+  > **$ git clone https://github.com/schacon/ticgit**<br />
+  > **$ cd ticgit**<br />
+> **$ git remote**<br />
+  > **$ git remote -v**
+  
+  # Adding Remote Repositories
+  > **$ git remote**<br />
+  > **$ git remote add pb https://github.com/paulboone/ticgit**<br />
+  > **$ git remote -v**<br />
+  
+  # Fetching and Pulling from Your Remotes
+  > **$ git fetch pb**
+  
+# Pushing to Your Remotes
+  > **$ git push origin master**
+  
+  # Inspecting a Remote, see more info
+  > **$ git remote show origin**
+  
+  # Renaming and Removing Remotes
+  > **$ git remote rename pb paul**
+> **$ git remote**
+  > **$ git remote remove paul**
+> **$ git remote**
+  
+  
+  # Git Aliases
+ >  **$ git config --global alias.co checkout**<br />
+> **$ git config --global alias.br branch**<br />
+> **$ git config --global alias.ci commit**<br />
+> **$ git config --global alias.st status**<br />
+  This means that, for example, instead of typing git commit, you just need to type git ci.
