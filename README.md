@@ -314,7 +314,7 @@ snapshots until you explicitly tell it to do so. It does this so you don’t acc
 generated binary files or other files that you did not mean to include.
   
   # Tracking New Files
-  > **$ git add README**
+  > **$ git add README**<br />
   > **$ git status**
 On branch master<br />
 Your branch is up-to-date with 'origin/master'.<br />
