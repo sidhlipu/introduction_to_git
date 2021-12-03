@@ -92,3 +92,117 @@ almost every aspect of version control that most other systems copied from the p
 generation. This makes Git more like a mini filesystem with some incredibly powerful tools built on
 top of it, rather than simply a VCS.
 
+#### Nearly Every Operation Is Local
+> Most operations in Git need only local files and resources to operate — generally no information is
+needed from another computer on your network.
+#### Git Has Integrity
+Everything in Git is checksummed before it is stored and is then referred to by that checksum. This
+means it’s impossible to change the contents of any file or directory without Git knowing about it. 
+
+**The mechanism that Git uses for this checksumming is called a SHA-1 hash. This is a 40-character
+string composed of hexadecimal characters (0–9 and a–f) and calculated based on the contents of a
+file or directory structure in Git.A SHA-1 hash looks something like this:**
+
+<img width="754" alt="Screenshot 2021-12-03 at 5 57 55 PM" src="https://user-images.githubusercontent.com/20242622/144602549-438b0b10-619a-44a6-84a5-4dd73153383c.png">
+
+#### Git Generally Only Adds Data
+> When you do actions in Git, nearly all of them only add data to the Git database. It is hard to get the
+system to do anything that is not undoable or to make it erase data in any way. As with any VCS, you
+can lose or mess up changes you haven’t committed yet, but after you commit a snapshot into Git, it
+is very difficult to lose, especially if you regularly push your database to another repository.
+
+> This makes using Git a joy because we know we can experiment without the danger of severely
+screwing things up.
+
+
+#### The Three States
+**Git has three main states that your files can reside in: _modified_,
+_staged_, and _committed_:**
+
+> Modified means that you have changed the file but have not committed it to your database yet.
+
+> Staged means that you have marked a modified file in its current version to go into your next
+commit snapshot.
+
+> Committed means that the data is safely stored in your local database.
+
+<img width="745" alt="Screenshot 2021-12-03 at 6 04 17 PM" src="https://user-images.githubusercontent.com/20242622/144603412-7444dbeb-3acc-4d51-a112-62ce947dcde4.png">
+
+
+The working tree is a single checkout of one version of the project. 
+
+> These files are pulled out of the
+compressed database in the Git directory and placed on disk for you to use or modify.
+
+> The staging area is a file, generally contained in your Git directory, that stores information about
+what will go into your next commit. Its technical name in Git parlance is the **“index”**, but the phrase
+“staging area” works just as well.
+
+> The Git directory is where Git stores the metadata and object database for your project. This is the
+most important part of Git, and it is what is copied when you clone a repository from another
+computer.
+
+
+#### The basic Git workflow goes something like this:
+
+**1. You modify files in your working tree.**<br /><br />
+**2. You selectively stage just those changes you want to be part of your next commit, which adds
+only those changes to the staging area.**<br /><br />
+**3. You do a commit, which takes the files as they are in the staging area and stores that snapshot
+permanently to your Git directory.**<br /><br />
+
+
+## Installing on Linux
+
+If you’re on Fedora (or
+any closely-related RPM-based distribution, such as RHEL or CentOS), you can use dnf:
+
+#### Debian/Ubuntu
+**For the latest stable version for your release of Debian/Ubuntu**
+> # apt-get install git
+
+#### Fedora
+> \# yum install git (up to Fedora 21)*<br />
+> \# dnf install git (Fedora 22 and later)
+
+_For more platforms_ https://git-scm.com/download/linux
+
+#### Windows 
+For windows, click on this link https://git-scm.com/download/win and a executable file will be downloaded. Follow the on-screen steps to install it. 
+
+
+
+# First-Time Git Setup
+
+> **git config**<br />
+
+This lets you get and set configuration variables that control
+all aspects of how Git looks and operates.
+
+Generally this is stored in **~/.gitconfig** but there are other places like **[path]/etc/gitconfig** or **config**
+
+_On Windows systems, Git looks for the .gitconfig file in the $HOME directory (C:\Users\$USER for
+most people)._
+
+**You can view all of your settings and where they are coming from using:**
+> **$ git config --list --show-origin**
+
+***Let set our Identity*
+> **$ git config --global user.name "Sidharth Mohapatra"**
+> **$ git config --global user.email "sidharth.mohapatra@devopskill.com"**
+
+_If you want to set this permanent for all your future git repositories, you can pass **--global** option along with the above commands._ <br />
+_If you want to override this with a
+different name or email address for specific projects, you can run the command without the
+**--global** option when you’re in that project._
+
+
+**Lets set our Editor**<br />
+For Linux based systems use:
+> **$ git config --global core.editor emacs**
+
+_On a Windows system, if you want to use a different text editor, you must specify the full path to its
+executable file. This can be different depending on how your editor is packaged._
+
+> **$ git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe'
+-multiInst -notabbar -nosession -noPlugin"**
