@@ -159,7 +159,7 @@ any closely-related RPM-based distribution, such as RHEL or CentOS), you can use
 
 #### Debian/Ubuntu
 **For the latest stable version for your release of Debian/Ubuntu**
-> # apt-get install git
+> \# apt-get install git
 
 #### Fedora
 > \# yum install git (up to Fedora 21)*<br />
@@ -187,8 +187,12 @@ most people)._
 **You can view all of your settings and where they are coming from using:**
 > **$ git config --list --show-origin**
 
-***Let set our Identity*
-> **$ git config --global user.name "Sidharth Mohapatra"**
+<br />
+<br />
+<br />
+
+**Let set our Identity**
+> **$ git config --global user.name "Sidharth Mohapatra"**<br />
 > **$ git config --global user.email "sidharth.mohapatra@devopskill.com"**
 
 _If you want to set this permanent for all your future git repositories, you can pass **--global** option along with the above commands._ <br />
@@ -196,13 +200,35 @@ _If you want to override this with a
 different name or email address for specific projects, you can run the command without the
 **--global** option when you’re in that project._
 
+<br />
+<br />
+<br />
+
 
 **Lets set our Editor**<br />
 For Linux based systems use:
-> **$ git config --global core.editor emacs**
+> **$ git config --global core.editor vi**
 
 _On a Windows system, if you want to use a different text editor, you must specify the full path to its
 executable file. This can be different depending on how your editor is packaged._
 
+<br />
+<br />
+<br />
 > **$ git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe'
 -multiInst -notabbar -nosession -noPlugin"**
+<br />
+<br />
+<br />
+**Your default branch name**
+Branching we shall cover a little later but by default Git will create a branch called master when you create a new repository with **git init**.<br />
+From Git version 2.28 onwards, you can set a different name for the initial branch.
+
+> **git config --global init.defaultBranch main**
+
+<br />
+<br />
+<br />
+
+**Checking Your Settings**
+> **$ git config --list**
