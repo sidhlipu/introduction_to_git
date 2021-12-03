@@ -284,6 +284,39 @@ Each file in your working directory can be in one of two states: <br />**tracked
   **Tracked files** are files that were in the last snapshot, as well as any newly staged files;
 they can be unmodified, modified, or staged. <br />In short, tracked files are files that Git knows about.<br /><br />
 **Untracked files** are everything else — any files in your working directory that were not in your last
-snapshot and are not in your staging area. As you edit files, Git sees them as modified, because you’ve changed them since your last commit.<br />
+snapshot and are not in your staging area. As you edit files, Git sees them as modified, because you’ve changed them since your last commit.<br /><br />
 As you work, you selectively stage these modified files and then commit all those staged changes,
 and the cycle repeats.<br /><br />
+  <img width="743" alt="Screenshot 2021-12-03 at 7 04 34 PM" src="https://user-images.githubusercontent.com/20242622/144611060-6ff40c00-90b6-402a-ba28-6583c1f92c95.png">
+
+# Checking the Status of Your Files
+> **$ git status**<br />
+On branch master<br />
+Your branch is up-to-date with 'origin/master'.<br />
+nothing to commit, working tree clean<br />
+  
+_This means you have a clean working directory_
+  
+> **$ echo 'My Project' > README**<br />
+> **$ git status**<br />
+On branch master<br />
+Your branch is up-to-date with 'origin/master'.<br />
+Untracked files:<br />
+(use "git add <file>..." to include in what will be committed)<br />
+README<br />
+nothing added to commit but untracked files present (use "git add" to track)<br />
+  
+You can see that your new README file is untracked, because it’s under the “Untracked files” heading
+in your status output. Untracked basically means that Git sees a file you didn’t have in the previous
+snapshot (commit), and which hasn’t yet been staged; Git won’t start including it in your commit
+snapshots until you explicitly tell it to do so. It does this so you don’t accidentally begin including
+generated binary files or other files that you did not mean to include.
+  
+  # Tracking New Files
+  > **$ git add README**
+  > **$ git status**
+On branch master<br />
+Your branch is up-to-date with 'origin/master'.<br />
+Changes to be committed:<br />
+(use "git restore --staged <file>..." to unstage)<br />
+new file: README<br />
