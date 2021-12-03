@@ -491,4 +491,5 @@ To remove a file from Git, you have to remove it from your tracked files and the
 > **$ git config --global alias.br branch**<br />
 > **$ git config --global alias.ci commit**<br />
 > **$ git config --global alias.st status**<br />
-  This means that, for example, instead of typing git commit, you just need to type git ci.
+
+  _This means that, for example, instead of typing git commit, you just need to type git ci._
