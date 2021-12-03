@@ -385,4 +385,49 @@ modified: CONTRIBUTING.md<br />
   # To see what you’ve changed but not yet staged
   > **$ git diff**
   
+  # To see what you’ve staged that will go into your next commit
+  > **git diff --staged**<br />
+  
+  or 
+  > **git diff --cached**
+  
+  # Committing Your Changes
+  > **$ git commit** <br />
+  _This will open the editor to put the comments
+  
+  > **$ git commit -m "Story 182: Updated README.md"**
+  
+  
+  # Skipping the Staging Area
+  If you want to skip the staging area, Git provides a simple shortcut. Adding the -a option to the git commit command makes Git automatically stage every file that is already tracked before doing the commit, letting you skip
+the git add part.
+  
+  > **$ git commit -a -m 'Add new benchmarks'** <br />
+  > [master 83e38c7] Add new benchmarks<br />
+1 file changed, 5 insertions(+), 0 deletions(-)<br />
+  
+  # Removing Files
+To remove a file from Git, you have to remove it from your tracked files and then commit.
+  
+  > **$ rm PROJECTS.md**<br />
+  > **$ git status**<br />
+  > **$ git rm PROJECTS.md**<br />
+  > **$ git status**
+  
+  # Keep the file in your working tree but remove it from your staging area
+  > **$ git rm --cached README**
+  
+  
+  # Moving Files
+  > **$ git mv README.md README**,br />
+> **$ git status**
+  
+  # Viewing the Commit History
+  > **git log**
+  
+  # Difference in last two commits
+  > **$ git log -p -2**
+  
+  #  See the statistics of commits
+  > **$ git log --stat**
   
