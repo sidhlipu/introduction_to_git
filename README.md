@@ -315,12 +315,8 @@ generated binary files or other files that you did not mean to include.
   
   # Tracking New Files
   > **$ git add README**<br />
-  > **$ git status**
-On branch master<br />
-Your branch is up-to-date with 'origin/master'.<br />
-Changes to be committed:<br />
-(use "git restore --staged <file>..." to unstage)<br />
-new file: README<br />
+  > **$ git status**<br />
+
 
   # Staging Modified Files
   Let’s change a file that was already tracked. If you change a previously tracked file called
