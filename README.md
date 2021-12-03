@@ -365,3 +365,24 @@ Changes not staged for commit:<br />
 (use "git add <file>..." to update what will be committed)<br />
 (use "git checkout -- <file>..." to discard changes in working directory)<br />
 modified: CONTRIBUTING.md<br />
+
+  
+  > **$ git add CONTRIBUTING.md**<br />
+> **$ git status**<br />
+On branch master<br />
+Your branch is up-to-date with 'origin/master'.<br />
+Changes to be committed:<br />
+(use "git reset HEAD <file>..." to unstage)<br />
+new file: README<br />
+modified: CONTRIBUTING.md<br />
+  
+  # Short Status
+  > **$ git status -s**
+  
+  # Ignoring Files
+  > **$ cat .gitignore**
+  
+  # To see what you’ve changed but not yet staged
+  > **$ git diff**
+  
+  
