@@ -257,3 +257,33 @@ You typically obtain a Git repository in one of two ways:<br />
 1. You can take a local directory that is currently not under version control, and turn it into a Git
 repository, or <br />
 2. You can clone an existing Git repository from elsewhere. <br />
+  
+## Initializing a Repository in an Existing Directory
+> **$ mkdir /home/\<user name\>/git_practice**<br />
+> **$ git init**<br />
+_This creates a new subdirectory named .git that contains all of your necessary repository files — a
+Git repository skeleton. At this point, nothing in your project is tracked yet._
+  
+# Cloning an Existing Repository
+> **$ git clone https://github.com/libgit2/libgit2** <br />
+  
+  _That creates a directory named libgit2, initializes a .git directory inside it, pulls down all the data
+for that repository, and checks out a working copy of the latest version. If you go into the new
+libgit2 directory that was just created, you’ll see the project files in there, ready to be worked on or
+used._<br />
+  
+
+_If you want to clone the repository into a directory named something other than libgit2, you can
+specify the new directory name as an additional argument:_  
+> **$ git clone https://github.com/libgit2/libgit2 mylibgit**
+  
+  
+# Recording Changes to the Repository
+Each file in your working directory can be in one of two states: <br />**tracked** or<br />
+**untracked.** <br /><br />
+  **Tracked files** are files that were in the last snapshot, as well as any newly staged files;
+they can be unmodified, modified, or staged. <br />In short, tracked files are files that Git knows about.<br /><br />
+**Untracked files** are everything else — any files in your working directory that were not in your last
+snapshot and are not in your staging area. As you edit files, Git sees them as modified, because you’ve changed them since your last commit.<br />
+As you work, you selectively stage these modified files and then commit all those staged changes,
+and the cycle repeats.<br /><br />
