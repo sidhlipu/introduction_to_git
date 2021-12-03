@@ -435,14 +435,13 @@ To remove a file from Git, you have to remove it from your tracked files and the
   > **$ git log --since=2.weeks**
   
   # Undoing Things
-  > **$ git commit --amend**
-  
+  > **$ git commit --amend**<br />
   > **$ git commit -m 'Initial commit'**<br />
-> $ git add forgotten_file**<br />
-> $ git commit --amend**<br />
+> **$ git add forgotten_file**<br />
+> **$ git commit --amend**<br />
   
   # Unstaging a Staged File
-  > **$ git add \* **<br />
+  > **$ git add \***<br />
   > **$ git status**<br /
   > **$ git reset HEAD CONTRIBUTING.md**
   > **$ git status**
