@@ -260,7 +260,7 @@ repository, or <br />
   
 ## Initializing a Repository in an Existing Directory
 > **$ mkdir /home/\<user name\>/git_practice**<br />
-  > **cd /home/\<user name\>/git_practice**<br />
+  > **$ cd /home/\<user name\>/git_practice**<br />
 > **$ git init**<br />
 _This creates a new subdirectory named .git that contains all of your necessary repository files — a
 Git repository skeleton. At this point, nothing in your project is tracked yet._
