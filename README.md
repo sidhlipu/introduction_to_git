@@ -471,6 +471,9 @@ To remove a file from Git, you have to remove it from your tracked files and the
   > **$ git fetch pb**
   
 # Pushing to Your Remotes
+  > **$ git add TEST.txt**<br />
+  > **$ git commit -m "Added a new file"**<br />
+  > **$git status**<br />
   > **$ git push origin master**
   
   # Inspecting a Remote, see more info
