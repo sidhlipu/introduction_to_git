@@ -231,9 +231,29 @@ From Git version 2.28 onwards, you can set a different name for the initial bran
 
 
 **Checking Your Settings**
-> **$ git config --list**
+> **$ git config --list** <br />
 > credential.helper=osxkeychain <br />
 user.name=Sidharth Mohapatra <br />
 user.email=sidharth.mohapatra@devopskill.com <br />
 core.editor=vi <br />
 init.defaultbranch=main <br />
+
+**You can also check what Git thinks a specific key’s value is by typing git config <key>:**
+> **$git config user.name** <br />
+Sidharth Mohapatra
+  
+<br />
+  <br />
+  
+**Getting Help**
+ 
+>**$ git help <verb>**<br />
+**$ git <verb> --help**<br />
+**$ man git-<verb>**<br />
+  
+  
+# Getting a Git Repository
+You typically obtain a Git repository in one of two ways:<br />
+1. You can take a local directory that is currently not under version control, and turn it into a Git
+repository, or <br />
+2. You can clone an existing Git repository from elsewhere. <br />
