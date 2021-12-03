@@ -323,7 +323,7 @@ generated binary files or other files that you did not mean to include.
 CONTRIBUTING.md and then run your git status command again, you get something that looks like
 this:
   
-  > **$ git status**
+  > **$ git status**<br />
 On branch master <br />
 Your branch is up-to-date with 'origin/master'.<br />
 Changes to be committed:<br />
@@ -347,7 +347,7 @@ Changes to be committed:<br />
 new file: README<br />
 modified: CONTRIBUTING.md<br />
   
-  _Now we see both the files are statged and will go in next commit.
+  _Now we see both the files are statged and will go in next commit._
   
   Lets change something in **CONTRIBUTING.md** again.
   > **$ vim CONTRIBUTING.md**<br />
@@ -390,7 +390,7 @@ modified: CONTRIBUTING.md<br />
   
   # Committing Your Changes
   > **$ git commit** <br />
-  _This will open the editor to put the comments
+  _This will open the editor to put the comments_
   
   > **$ git commit -m "Story 182: Updated README.md"**
   
