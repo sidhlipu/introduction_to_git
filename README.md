@@ -189,7 +189,7 @@ most people)._
 
 <br />
 <br />
-<br />
+
 
 **Let set our Identity**
 > **$ git config --global user.name "Sidharth Mohapatra"**<br />
@@ -202,7 +202,7 @@ different name or email address for specific projects, you can run the command w
 
 <br />
 <br />
-<br />
+
 
 
 **Lets set our Editor**<br />
@@ -214,9 +214,9 @@ executable file. This can be different depending on how your editor is packaged.
 
 <br />
 <br />
-<br />
-> **$ git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe'
--multiInst -notabbar -nosession -noPlugin"**
+
+> **$ git config --global core.editor \"'C:/Program Files/Notepad++/notepad++.exe'
+-multiInst -notabbar -nosession -noPlugin\"**
 <br />
 <br />
 <br />
@@ -228,7 +228,12 @@ From Git version 2.28 onwards, you can set a different name for the initial bran
 
 <br />
 <br />
-<br />
+
 
 **Checking Your Settings**
 > **$ git config --list**
+> credential.helper=osxkeychain <br />
+user.name=Sidharth Mohapatra <br />
+user.email=sidharth.mohapatra@devopskill.com <br />
+core.editor=vi <br />
+init.defaultbranch=main <br />
