@@ -517,7 +517,10 @@ To remove a file from Git, you have to remove it from your tracked files and the
   > **$ git merge hotfix**
   
   # Deleting a branch
+  ## Removing the local branch
   > **$ git branch -d hotfix**
+  ## Removing the remote branch
+  > **git push origin --delete hotfix **<br />
   
   # Branch Management
   ## List all branches
