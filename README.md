@@ -417,7 +417,7 @@ To remove a file from Git, you have to remove it from your tracked files and the
   
   
   # Moving Files
-  > **$ git mv README.md README**,br />
+  > **$ git mv README.md README**<br />
 > **$ git status**
   
   # Viewing the Commit History
