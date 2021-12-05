@@ -494,3 +494,38 @@ To remove a file from Git, you have to remove it from your tracked files and the
 > **$ git config --global alias.st status**<br />
 
   _This means that, for example, instead of typing git commit, you just need to type git ci._
+  
+  # Branches in a Nutshell
+  > **$ git add README test.rb LICENSE**<br />
+> **$ git commit -m 'Initial commit'**
+  
+# Creating a new branch
+  > **$ git branch testing**
+  
+# Switching Branches
+  > **$ git checkout testing**<br />
+  > **$ vim test.rb**<br />
+> **$ git commit -a -m 'made a change'**<br />
+  > **$ git checkout master**<br />
+  > **$ git status**
+  
+  # Merging a branch
+  > **$ git branch hotfilx**<br />
+  > **$ git add README**<br />
+  > **$ git commit -m "Hot fix added for Bug:230189"**<br />
+  > **$ git checkout master**<br />
+  > **$ git merge hotfix**
+  
+  # Deleting a branch
+  > **$ git branch -d hotfix**
+  
+  # Branch Management
+  ## List all branches
+  > **$ git branch**
+  
+  ## See all the commits in the branches
+  > **$ git branch -v**
+  
+  ## Changing branch name
+  > **$ git branch --move bad-branch-name corrected-branch-name**<br />
+  > **$ git branch --all**
